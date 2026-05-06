@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="PixelForge Lab - Indie game studio crafting thrilling hyper-casual mobile experiences. Play our games on Amazon Appstore."/>
+  <meta property="og:title" content="PixelForge Lab – Mobile Games Studio"/>
+  <meta property="og:description" content="Discover hyper-casual action games by PixelForge Lab, available on Amazon Appstore."/>
+  <title>PixelForge Lab – Mobile Game Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Particle canvas background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header id="main-header">
+    <nav class="navbar container">
+      <div class="logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">PixelForge<span class="logo-accent">Lab</span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#games" class="nav-link">Games</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="hero">
+    <div class="hero-bg-glow glow-1"></div>
+    <div class="hero-bg-glow glow-2"></div>
+    <div class="hero-bg-glow glow-3"></div>
+
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available on Amazon Appstore
+      </div>
+      <h1 class="hero-title">
+        We Craft<br/>
+        <span class="gradient-text">Epic Games</span><br/>
+        You'll Love
+      </h1>
+      <p class="hero-subtitle">
+        PixelForge Lab is an indie mobile game studio building fast-paced, 
+        thrilling hyper-casual experiences for players worldwide.
+      </p>
+      <div class="hero-cta">
+        <a href="#games" class="btn btn-primary" id="hero-cta-games">
+          <span>Explore Games</span>
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="https://www.amazon.com/s?k=PixelForge+Lab&i=mobile-apps" target="_blank" rel="noopener" class="btn btn-ghost" id="hero-cta-amazon">
+          View on Amazon
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">2+</span>
+          <span class="stat-label">Games Released</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Levels Crafted</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">3D</span>
+          <span class="stat-label">Hyper-Casual</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== GAMES ===================== -->
+  <section id="games" class="games-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Games</span>
+        <h2 class="section-title">Discover Our <span class="gradient-text">Universe</span></h2>
+        <p class="section-subtitle">Each game is carefully crafted for maximum fun and replayability</p>
+      </div>
+
+      <div class="games-grid">
+
+        <!-- GAME 1 -->
+        <article class="game-card" id="game-bullet-dodger" data-aos="fade-up">
+          <div class="card-glow"></div>
+          <div class="card-badge badge-action">Action · Arcade</div>
+          <div class="card-image-wrap">
+            <img
+              src="https://m.media-amazon.com/images/I/81OVAAcMEqL.png"
+              alt="Bullet Dodger 3D game cover"
+              class="card-image"
+              loading="lazy"
+            />
+            <div class="card-image-overlay">
+              <div class="play-icon">▶</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Bullet Dodger 3D</h3>
+            <p class="card-desc">
+              An action-packed hyper-casual game where your reflexes mean the difference between life and death. 
+              Step into a vibrant 3D low-poly city — dodge missiles, outsmart enemies, and survive!
+            </p>
+            <div class="card-tags">
+              <span class="tag">Hyper-Casual</span>
+              <span class="tag">27.7 MB</span>
+              <span class="tag">Free</span>
+            </div>
+            <div class="card-features">
+              <div class="feature"><span class="feat-icon">⚡</span> Matrix-style dodging</div>
+              <div class="feature"><span class="feat-icon">🕹️</span> Simple joystick controls</div>
+              <div class="feature"><span class="feat-icon">🌆</span> Stunning 3D low-poly city</div>
+            </div>
+            <a
+              href="https://www.amazon.com/dp/B0GX33R6YH"
+              target="_blank"
+              rel="noopener"
+              class="btn-amazon"
+              id="btn-game1-amazon"
+            >
+              <img src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/images/amazon-underground-app-us-black.png" alt="Available at Amazon Appstore" class="amazon-badge-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+              <span class="amazon-badge-fallback">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#FF9900"><path d="M14.5 2.5c0 1.5-1.5 2.7-1.5 4.5H11c0-1.8-1.5-3-1.5-4.5a2.5 2.5 0 015 0z"/><path d="M4.1 13.8C2.8 12.3 2 10.2 2 8c0-5.5 4.5-8 10-8s10 2.5 10 8c0 2.2-.8 4.3-2.1 5.8L12 22 4.1 13.8z" fill="none" stroke="#FF9900" stroke-width="1.5"/></svg>
+                <span>Get it on <strong>Amazon Appstore</strong></span>
+              </span>
+            </a>
+          </div>
+        </article>
+
+        <!-- GAME 2 -->
+        <article class="game-card" id="game-spectrum-squad" data-aos="fade-up" data-aos-delay="150">
+          <div class="card-glow glow-purple"></div>
+          <div class="card-badge badge-casual">Hyper-Casual</div>
+          <div class="card-image-wrap">
+            <img
+              src="https://m.media-amazon.com/images/I/817QsqNx9ML.png"
+              alt="Spectrum Squad: The Ultimate Color Run game cover"
+              class="card-image"
+              loading="lazy"
+            />
+            <div class="card-image-overlay">
+              <div class="play-icon">▶</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Spectrum Squad</h3>
+            <p class="card-subtitle-game">The Ultimate Color Run</p>
+            <p class="card-desc">
+              Blast characters from a cannon, grow your squad, and overwhelm the enemy crowd! 
+              50 handcrafted levels with increasing challenge and vibrant 3D crowd-vs-crowd action.
+            </p>
+            <div class="card-tags">
+              <span class="tag">50 Levels</span>
+              <span class="tag">48.2 MB</span>
+              <span class="tag">Free</span>
+            </div>
+            <div class="card-features">
+              <div class="feature"><span class="feat-icon">💥</span> Cannon blast mechanics</div>
+              <div class="feature"><span class="feat-icon">🎨</span> Vibrant color battles</div>
+              <div class="feature"><span class="feat-icon">👥</span> Crowd-vs-crowd action</div>
+            </div>
+            <a
+              href="https://www.amazon.com/dp/B0GYKPQRPN"
+              target="_blank"
+              rel="noopener"
+              class="btn-amazon"
+              id="btn-game2-amazon"
+            >
+              <img src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/images/amazon-underground-app-us-black.png" alt="Available at Amazon Appstore" class="amazon-badge-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+              <span class="amazon-badge-fallback">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#FF9900"><path d="M14.5 2.5c0 1.5-1.5 2.7-1.5 4.5H11c0-1.8-1.5-3-1.5-4.5a2.5 2.5 0 015 0z"/><path d="M4.1 13.8C2.8 12.3 2 10.2 2 8c0-5.5 4.5-8 10-8s10 2.5 10 8c0 2.2-.8 4.3-2.1 5.8L12 22 4.1 13.8z" fill="none" stroke="#FF9900" stroke-width="1.5"/></svg>
+                <span>Get it on <strong>Amazon Appstore</strong></span>
+              </span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="about-section">
+    <div class="about-bg-shape"></div>
+    <div class="container about-inner">
+      <div class="about-text">
+        <span class="section-tag">About Us</span>
+        <h2 class="section-title">Built by Gamers,<br/><span class="gradient-text">For Gamers</span></h2>
+        <p class="about-desc">
+          PixelForge Lab is an independent mobile game studio passionate about creating 
+          high-quality hyper-casual experiences. Every game we ship is designed with 
+          precision, fun, and replayability at its core.
+        </p>
+        <ul class="about-list">
+          <li>
+            <span class="list-icon">🎮</span>
+            <span>Hyper-casual games with deep mechanics</span>
+          </li>
+          <li>
+            <span class="list-icon">📱</span>
+            <span>Optimized for mobile — smooth & lightweight</span>
+          </li>
+          <li>
+            <span class="list-icon">🔥</span>
+            <span>Available exclusively on Amazon Appstore</span>
+          </li>
+          <li>
+            <span class="list-icon">⭐</span>
+            <span>Constantly updating with new content & levels</span>
+          </li>
+        </ul>
+        <a href="https://www.amazon.com/s?k=PixelForge+Lab&i=mobile-apps" target="_blank" rel="noopener" class="btn btn-primary" id="about-cta">
+          View All Games on Amazon
+        </a>
+      </div>
+      <div class="about-visual">
+        <div class="visual-card vc1">
+          <span class="vc-icon">🎯</span>
+          <span class="vc-label">Precision Design</span>
+        </div>
+        <div class="visual-card vc2">
+          <span class="vc-icon">⚡</span>
+          <span class="vc-label">Fast-Paced Action</span>
+        </div>
+        <div class="visual-card vc3">
+          <span class="vc-icon">🌍</span>
+          <span class="vc-label">Global Players</span>
+        </div>
+        <div class="visual-ring ring-outer"></div>
+        <div class="visual-ring ring-inner"></div>
+        <div class="visual-center">PFL</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA BANNER ===================== -->
+  <section class="cta-banner">
+    <div class="cta-glow"></div>
+    <div class="container cta-content">
+      <h2 class="cta-title">Ready to Play?</h2>
+      <p class="cta-sub">Download our games for free on Amazon Appstore and start the adventure!</p>
+      <a href="https://www.amazon.com/s?k=PixelForge+Lab&i=mobile-apps" target="_blank" rel="noopener" class="btn btn-primary btn-lg" id="cta-banner-btn">
+        <span>🎮 Get Our Games — It's Free!</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="section-subtitle">Have a question or partnership inquiry? We'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card" id="contact-email">
+          <span class="contact-icon">✉️</span>
+          <h3>Email Us</h3>
+          <p>pixelforgelab@gmail.com</p>
+        </div>
+        <div class="contact-card" id="contact-amazon">
+          <span class="contact-icon">🛒</span>
+          <h3>Amazon Appstore</h3>
+          <a href="https://www.amazon.com/s?k=PixelForge+Lab&i=mobile-apps" target="_blank" rel="noopener">Find us on Amazon</a>
+        </div>
+        <div class="contact-card" id="contact-games">
+          <span class="contact-icon">🎮</span>
+          <h3>Support</h3>
+          <p>In-game feedback & bug reports welcome</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">PixelForge<span class="logo-accent">Lab</span></span>
+      </div>
+      <p class="footer-copy">© 2025 PixelForge Lab. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#games">Games</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
