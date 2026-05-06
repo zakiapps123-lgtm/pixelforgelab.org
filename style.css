@@ -212,6 +212,22 @@ body {
 .nav-link:hover, .nav-link.active { color: var(--text-primary); }
 .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
+/* Privacy Policy special pill style */
+.nav-link-pp {
+  background: rgba(255,123,0,0.12) !important;
+  border: 1px solid rgba(255,123,0,0.35) !important;
+  padding: 5px 14px !important;
+  border-radius: 50px !important;
+  color: var(--accent-orange) !important;
+  font-size: 0.82rem !important;
+}
+.nav-link-pp::after { display: none !important; }
+.nav-link-pp:hover, .nav-link-pp.active {
+  background: rgba(255,123,0,0.22) !important;
+  color: var(--accent-orange) !important;
+  border-color: var(--accent-orange) !important;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;

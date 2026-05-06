@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="PixelForge Lab Privacy Policy — We do not collect, store, or share any personal information. Zero data collection, ad-free games."/>
+  <title>Privacy Policy – PixelForge Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ── Privacy Page Specific ── */
+    .pp-hero {
+      padding: 140px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .pp-hero::before {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(77,139,255,0.08) 0%, transparent 70%);
+      top: -200px; left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+    }
+    .pp-hero-icon {
+      font-size: 3.5rem;
+      display: block;
+      margin-bottom: 1rem;
+      animation: fadeInDown 0.7s ease both;
+    }
+    .pp-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      margin-bottom: 1rem;
+      animation: fadeInUp 0.8s 0.1s ease both;
+    }
+    .pp-hero-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      animation: fadeInUp 0.8s 0.2s ease both;
+    }
+    .pp-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 50px;
+    }
+
+    /* ── Content Layout ── */
+    .pp-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 3rem;
+      align-items: start;
+      padding: 60px 0 100px;
+    }
+    @media (max-width: 860px) {
+      .pp-layout { grid-template-columns: 1fr; }
+      .pp-sidebar { display: none; }
+    }
+
+    /* ── Sidebar TOC ── */
+    .pp-sidebar {
+      position: sticky;
+      top: 100px;
+    }
+    .toc-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+    }
+    .toc-title {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-blue);
+      margin-bottom: 1rem;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .toc-list a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      border: 1px solid transparent;
+    }
+    .toc-list a:hover {
+      color: var(--text-primary);
+      background: var(--bg-card-hover);
+      border-color: var(--border);
+    }
+    .toc-num {
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      color: var(--accent-orange);
+      min-width: 18px;
+    }
+
+    .toc-highlight-box {
+      margin-top: 1.5rem;
+      background: linear-gradient(135deg, rgba(0,245,160,0.08), rgba(0,212,255,0.05));
+      border: 1px solid rgba(0,245,160,0.2);
+      border-radius: var(--radius-md);
+      padding: 1.2rem;
+      text-align: center;
+    }
+    .toc-highlight-box .badge-icon { font-size: 1.8rem; display: block; margin-bottom: 0.5rem; }
+    .toc-highlight-box p { font-size: 0.78rem; color: var(--accent-green); font-weight: 600; }
+    .toc-highlight-box span { font-size: 0.72rem; color: var(--text-muted); }
+
+    /* ── Article ── */
+    .pp-article {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .pp-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem 2.2rem;
+      transition: border-color 0.3s ease;
+      scroll-margin-top: 100px;
+    }
+    .pp-section:hover { border-color: rgba(77,139,255,0.25); }
+
+    .pp-section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .pp-section-num {
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      color: var(--accent-orange);
+      background: rgba(255,123,0,0.1);
+      border: 1px solid rgba(255,123,0,0.2);
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .pp-section-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .pp-section h2 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .pp-section p {
+      color: var(--text-secondary);
+      font-size: 0.93rem;
+      line-height: 1.75;
+      margin-bottom: 0.75rem;
+    }
+    .pp-section p:last-child { margin-bottom: 0; }
+
+    .pp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin: 0.75rem 0;
+    }
+    .pp-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .pp-bullets li::before {
+      content: '›';
+      color: var(--accent-blue);
+      font-size: 1.2rem;
+      line-height: 1.3;
+      flex-shrink: 0;
+    }
+
+    .pp-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+    .pp-badge-green {
+      background: rgba(0,245,160,0.1);
+      color: var(--accent-green);
+      border: 1px solid rgba(0,245,160,0.2);
+    }
+    .pp-badge-blue {
+      background: rgba(0,212,255,0.1);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(0,212,255,0.2);
+    }
+    .pp-badge-purple {
+      background: rgba(155,93,229,0.1);
+      color: var(--accent-purple);
+      border: 1px solid rgba(155,93,229,0.2);
+    }
+    .pp-badge-orange {
+      background: rgba(255,123,0,0.1);
+      color: var(--accent-orange);
+      border: 1px solid rgba(255,123,0,0.2);
+    }
+
+    .pp-contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 500px) { .pp-contact-grid { grid-template-columns: 1fr; } }
+
+    .pp-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      transition: var(--transition);
+    }
+    .pp-contact-item:hover { border-color: rgba(77,139,255,0.35); }
+    .pp-contact-item a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: var(--transition);
+    }
+    .pp-contact-item a:hover { color: var(--accent-orange); }
+    .pp-contact-item span { font-size: 0.72rem; color: var(--text-muted); display: block; }
+    .pp-contact-icon { font-size: 1.3rem; }
+
+    /* ── Summary Cards ── */
+    .pp-summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    @media (max-width: 640px) { .pp-summary { grid-template-columns: 1fr; } }
+    .summary-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .summary-card:hover { transform: translateY(-4px); border-color: rgba(77,139,255,0.3); }
+    .summary-card .sc-icon { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
+    .summary-card .sc-title {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.3rem;
+    }
+    .summary-card .sc-desc { font-size: 0.75rem; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+
+  <!-- Particle canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ── HEADER ── -->
+  <header id="main-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo" style="text-decoration:none;">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">PixelForge<span class="logo-accent">Lab</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#home"    class="nav-link">Home</a></li>
+        <li><a href="index.html#games"   class="nav-link">Games</a></li>
+        <li><a href="index.html#about"   class="nav-link">About</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="privacy-policy.html" class="nav-link nav-link-pp active">Privacy Policy</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="pp-hero">
+    <div class="container">
+      <span class="pp-hero-icon">🔒</span>
+      <div class="section-tag">Legal</div>
+      <h1>Privacy <span class="gradient-text">Policy</span></h1>
+      <div class="pp-hero-meta">
+        <div class="pp-meta-item">📅 Last Updated: May 2025</div>
+        <div class="pp-meta-item">🏢 PixelForge Lab</div>
+        <div class="pp-meta-item">✅ COPPA Compliant</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LAYOUT ── -->
+  <div class="container pp-layout">
+
+    <!-- Sidebar -->
+    <aside class="pp-sidebar">
+      <div class="toc-box">
+        <p class="toc-title">Table of Contents</p>
+        <ul class="toc-list">
+          <li><a href="#section-intro"><span class="toc-num">00</span> Introduction</a></li>
+          <li><a href="#section-1"><span class="toc-num">01</span> Zero Data Collection</a></li>
+          <li><a href="#section-2"><span class="toc-num">02</span> No Advertising</a></li>
+          <li><a href="#section-3"><span class="toc-num">03</span> Children's Privacy</a></li>
+          <li><a href="#section-4"><span class="toc-num">04</span> Third-Party Links</a></li>
+          <li><a href="#section-5"><span class="toc-num">05</span> Policy Changes</a></li>
+          <li><a href="#section-6"><span class="toc-num">06</span> Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="toc-highlight-box">
+        <span class="badge-icon">🛡️</span>
+        <p>100% Privacy Safe</p>
+        <span>No data collected, ever.</span>
+      </div>
+    </aside>
+
+    <!-- Article -->
+    <article class="pp-article">
+
+      <!-- Summary Cards -->
+      <div class="pp-summary">
+        <div class="summary-card">
+          <span class="sc-icon">🚫</span>
+          <p class="sc-title">Zero Tracking</p>
+          <p class="sc-desc">No analytics, no identifiers, no logging</p>
+        </div>
+        <div class="summary-card">
+          <span class="sc-icon">📵</span>
+          <p class="sc-title">Ad-Free</p>
+          <p class="sc-desc">100% clean, uninterrupted gameplay</p>
+        </div>
+        <div class="summary-card">
+          <span class="sc-icon">👶</span>
+          <p class="sc-title">Child Safe</p>
+          <p class="sc-desc">COPPA compliant for all ages</p>
+        </div>
+      </div>
+
+      <!-- Intro -->
+      <div class="pp-section" id="section-intro">
+        <div class="pp-section-header">
+          <span class="pp-section-icon">📜</span>
+          <h2>Introduction</h2>
+        </div>
+        <p>
+          At <strong style="color:var(--text-primary);">PixelForge Lab</strong>, we believe in a simple and private gaming experience. 
+          This Privacy Policy explains our commitment to your data security while using our mobile applications.
+        </p>
+        <p>
+          We have built our games with privacy as a core principle — not an afterthought. 
+          Your trust matters to us, and we want to be fully transparent about how (or rather, how little) we interact with your data.
+        </p>
+      </div>
+
+      <!-- Section 1 -->
+      <div class="pp-section" id="section-1">
+        <div class="pp-section-header">
+          <span class="pp-section-num">01</span>
+          <span class="pp-section-icon">🚫</span>
+          <h2>Zero Data Collection</h2>
+        </div>
+        <span class="pp-badge pp-badge-green">✓ No Data Collected</span>
+        <p>
+          We respect your privacy. Our games do not collect, store, or share any personal or non-personal information from your device.
+        </p>
+        <ul class="pp-bullets">
+          <li>We do not collect names, email addresses, phone numbers, or locations.</li>
+          <li>We do not use tracking identifiers or analytics tools.</li>
+          <li>No data is transmitted to our servers or any third-party servers.</li>
+          <li>Your gameplay data stays entirely on your device.</li>
+        </ul>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="pp-section" id="section-2">
+        <div class="pp-section-header">
+          <span class="pp-section-num">02</span>
+          <span class="pp-section-icon">📵</span>
+          <h2>No Advertising</h2>
+        </div>
+        <span class="pp-badge pp-badge-blue">✓ 100% Ad-Free</span>
+        <p>
+          To provide a clean and uninterrupted user experience, our games are <strong style="color:var(--accent-cyan);">100% Ad-Free</strong>.
+        </p>
+        <ul class="pp-bullets">
+          <li>We do not display third-party advertisements.</li>
+          <li>We do not share any information with advertising networks because we do not use them.</li>
+          <li>No banner ads, interstitials, or rewarded video ads exist in our games.</li>
+        </ul>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="pp-section" id="section-3">
+        <div class="pp-section-header">
+          <span class="pp-section-num">03</span>
+          <span class="pp-section-icon">👶</span>
+          <h2>Children's Privacy</h2>
+        </div>
+        <span class="pp-badge pp-badge-purple">✓ COPPA Compliant</span>
+        <p>
+          Our games are designed for all ages and are safe for children. Since we do not collect any data, 
+          our applications are fully compliant with privacy laws such as 
+          <strong style="color:var(--accent-purple);">COPPA</strong> (Children's Online Privacy Protection Act).
+        </p>
+        <p>
+          Parents and guardians can be confident that their children can enjoy our games without any privacy concerns.
+        </p>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="pp-section" id="section-4">
+        <div class="pp-section-header">
+          <span class="pp-section-num">04</span>
+          <span class="pp-section-icon">🔗</span>
+          <h2>Third-Party Links</h2>
+        </div>
+        <span class="pp-badge pp-badge-orange">✓ Self-Contained</span>
+        <p>
+          Our games are self-contained and do not contain links to external websites or third-party services.
+        </p>
+        <p>
+          You can play with complete peace of mind knowing that no external parties are involved in your gaming experience.
+        </p>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="pp-section" id="section-5">
+        <div class="pp-section-header">
+          <span class="pp-section-num">05</span>
+          <span class="pp-section-icon">🔄</span>
+          <h2>Changes to This Policy</h2>
+        </div>
+        <p>
+          We may update this policy occasionally. Any changes will be posted on this page with an updated 
+          <strong style="color:var(--text-primary);">"Last Updated"</strong> date.
+        </p>
+        <p>
+          We encourage you to review this page periodically to stay informed about our privacy practices. 
+          Continued use of our games after changes are posted constitutes your acceptance of the updated policy.
+        </p>
+      </div>
+
+      <!-- Section 6 — Contact -->
+      <div class="pp-section" id="section-6">
+        <div class="pp-section-header">
+          <span class="pp-section-num">06</span>
+          <span class="pp-section-icon">✉️</span>
+          <h2>Contact Us</h2>
+        </div>
+        <p>
+          If you have any questions regarding our privacy practices, please don't hesitate to reach out. 
+          We're happy to answer any questions you may have.
+        </p>
+        <div class="pp-contact-grid">
+          <div class="pp-contact-item">
+            <span class="pp-contact-icon">📧</span>
+            <div>
+              <span>Email</span>
+              <a href="mailto:support@pixelforgelab.org">support@pixelforgelab.org</a>
+            </div>
+          </div>
+          <div class="pp-contact-item">
+            <span class="pp-contact-icon">🌐</span>
+            <div>
+              <span>Website</span>
+              <a href="https://pixelforgelab.org" target="_blank" rel="noopener">pixelforgelab.org</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">PixelForge<span class="logo-accent">Lab</span></span>
+      </div>
+      <p class="footer-copy">© 2025 PixelForge Lab. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#games">Games</a>
+        <a href="index.html#about">About</a>
+        <a href="privacy-policy.html" style="color:var(--accent-orange);">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
